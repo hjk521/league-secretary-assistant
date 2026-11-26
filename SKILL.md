@@ -1,5 +1,5 @@
 ---
-name: tuan-zhibu-workflow
+name: league-secretary-assistant
 description: 将团委、组织部通知及附件转化为适合本班情况的团支书执行方案，先确认通知对象和缺失条件，再按最小必要职责生成内部安排、分对象短通知、材料留痕与复用方案；适用于团课、团费、推优、班团一体化、五四评优、入团积极分子、档案交接、团支书会议、团员年度评议等事务。
 metadata:
   short-description: 团支书通知智能拆解与班级定制
