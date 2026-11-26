@@ -26,6 +26,8 @@ git clone https://github.com/hjk521/league-secretary-assistant.git
 
 把克隆下来的目录整个放进你所用工具的 skills 目录：
 
+**WorkBuddy 用户更简单**：左侧「专家·技能·连接器」→ 技能 → 添加技能 → 上传技能，把 zip 直接拖进去，系统自动配置，不用手动放目录。装完新开一个会话才生效。
+
 | 工具 | skills 目录 |
 |---|---|
 | Claude Code | `~/.claude/skills/` |
@@ -62,12 +64,15 @@ git clone https://github.com/hjk521/league-secretary-assistant.git
 ## 目录
 
 ```
+使用说明.md        新手版教程：安装、初始化、日常用法、给老师演示的脚本
 SKILL.md          主体：语言要求 + 第 0—9 节通用规则
 本班记忆模板.md    空白模板；也可以不填，让它初始化时问你
 LICENSE           MIT
 examples/
   示例-团员年度评议.md   一次完整跑通的输出长什么样（已脱敏）
 ```
+
+**第一次用，先看 [使用说明.md](使用说明.md)。** 那份是写给完全没用过 AI 技能的人的，从“点哪个按钮”开始讲，末尾还附了一段给老师演示的五分钟脚本。
 
 ## 它能处理什么
 
