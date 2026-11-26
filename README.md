@@ -17,13 +17,27 @@ League Secretary Assistant —— 把团委、组织部发下来的长通知，�
 
 ## 安装
 
-把整个目录复制到你所用工具的 skills 目录下，目录名用 `league-secretary-assistant`，关键是里面要有 `SKILL.md`。
+推荐直接克隆，目录名天然就是对的：
+
+```bash
+git clone https://github.com/hjk521/league-secretary-assistant.git
+```
+
+把克隆下来的目录整个放进你所用工具的 skills 目录：
 
 | 工具 | skills 目录 |
 |---|---|
 | Claude Code | `~/.claude/skills/` |
 | Codex CLI | `~/.codex/skills/` |
 | WorkBuddy | `~/.workbuddy/skills/` |
+
+**用 Download ZIP 的话要注意**：解压出来是 `league-secretary-assistant-main`，要手动改回 `league-secretary-assistant`。目录名和 skill 里写的名字对不上时，部分工具会加载不出来，或者把它当成另一个 skill。
+
+### 确认装好了
+
+在任意对话里说一句“初始化”。如果它先问你五个问题（班级与命名、人数、团支委构成、会议惯例、工具），说明加载成功。
+
+没反应就检查两件事：`SKILL.md` 必须**直接**放在 skill 目录下，不能再套一层文件夹；文件名大小写要和这里写的一致。
 
 复制完成后不用手填模板。第一次对话时它会有一次初始化，用 5 个问题把班级档案问清楚并写进 `本班记忆.md`：
 
@@ -47,8 +61,9 @@ League Secretary Assistant —— 把团委、组织部发下来的长通知，�
 ## 目录
 
 ```
-SKILL.md          主体：第 1—9 节通用规则
-本班记忆模板.md    空白模板，复制成 本班记忆.md 后填写
+SKILL.md          主体：语言要求 + 第 0—9 节通用规则
+本班记忆模板.md    空白模板；也可以不填，让它初始化时问你
+LICENSE           MIT
 examples/
   示例-团员年度评议.md   一次完整跑通的输出长什么样（已脱敏）
 ```
@@ -76,3 +91,7 @@ examples/
 这个 skill 里的比例、到会人数、优秀名额等都要**用脚本算**，不要心算：向下取整之后还要回验一次，取整后的比例是否真的没超上限。
 
 所有输出都只是草案。发送、提交、公示之前，仍然要你自己核一遍附件原文。
+
+## 授权
+
+MIT。可以随便用、随便改、拿去改造成别的学生工作场景，保留版权声明即可。
