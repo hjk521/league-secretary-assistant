@@ -62,7 +62,7 @@ git clone https://github.com/hjk521/league-secretary-assistant.git
 ## 目录
 
 ```
-使用说明.md        新手教程：准备工作、安装、档案位置、示例对话、按场景清单
+使用说明.md        新手教程：用途、安装、初始化与档案、日常使用、适用事务、核对与速查
 SKILL.md          主体：语言要求 + 第 0—10 节通用规则
 本班记忆模板.md    空白模板；也可以不填，让它初始化时问你
 LICENSE           MIT
