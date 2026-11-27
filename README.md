@@ -18,31 +18,29 @@ League Secretary Assistant —— 把团委、组织部发下来的长通知，�
 
 ## 安装
 
-推荐直接克隆，目录名天然就是对的：
+### WorkBuddy（推荐，两分钟）
+
+1. 下载安装包：[`dist/league-secretary-assistant.zip`](dist/league-secretary-assistant.zip)
+2. 左侧「专家 · 技能 · 连接器」→ 技能 → 添加技能 → 上传技能，把 ZIP 拖进去（**不用解压**）
+3. **新开一个会话**才生效
+
+别用页面右上角的「Download ZIP」源码包——那个解压后目录名带 `-main`，装进去可能识别不到。
+
+### Claude Code / Codex
 
 ```bash
 git clone https://github.com/hjk521/league-secretary-assistant.git
 ```
 
-把克隆下来的目录整个放进你所用工具的 skills 目录：
+把克隆下来的目录整个放进 skills 目录：Claude Code 是 `~/.claude/skills/`，Codex 是 `~/.codex/skills/`，WorkBuddy 是 `~/.workbuddy/skills/`。
 
-**WorkBuddy 用户更简单**：左侧「专家·技能·连接器」→ 技能 → 添加技能 → 上传技能，把 zip 直接拖进去，系统自动配置，不用手动放目录。装完新开一个会话才生效。
-
-| 工具 | skills 目录 |
-|---|---|
-| Claude Code | `~/.claude/skills/` |
-| Codex CLI | `~/.codex/skills/` |
-| WorkBuddy | `~/.workbuddy/skills/` |
-
-**用 Download ZIP 的话要注意**：解压出来是 `league-secretary-assistant-main`，要手动改回 `league-secretary-assistant`。目录名和 skill 里写的名字对不上时，部分工具会加载不出来，或者把它当成另一个 skill。
+三个工具的能力差别在腾讯文档：只有 WorkBuddy 能连，另外两个只能处理拖进去的本地文件。
 
 ### 确认装好了
 
-在任意对话里说一句“初始化”。如果它先问你五个问题（班级与命名、人数、团支委构成、会议惯例、工具），说明加载成功。
+说一句“初始化”，它开始问你五个问题就说明加载成功。没反应先查两件事：`SKILL.md` 是否**直接**在技能目录下（没多套一层），以及是否新开了会话。
 
-没反应就检查两件事：`SKILL.md` 必须**直接**放在 skill 目录下，不能再套一层文件夹；文件名大小写要和这里写的一致。
-
-复制完成后不用手填模板。第一次对话时它会有一次初始化，用 5 个问题把班级档案问清楚并写进 `本班记忆.md`：
+第一次对话它会用 5 个问题建档：
 
 1. 学院、年级、专业、班级全称怎么写，上一份被接收过的文件叫什么；
 2. 班级总人数、团员人数；
@@ -64,15 +62,17 @@ git clone https://github.com/hjk521/league-secretary-assistant.git
 ## 目录
 
 ```
-使用说明.md        新手版教程：安装、初始化、日常用法、给老师演示的脚本
-SKILL.md          主体：语言要求 + 第 0—9 节通用规则
+使用说明.md        新手教程：准备工作、安装、档案位置、示例对话、按场景清单
+SKILL.md          主体：语言要求 + 第 0—10 节通用规则
 本班记忆模板.md    空白模板；也可以不填，让它初始化时问你
 LICENSE           MIT
+dist/
+  league-secretary-assistant.zip   安装包，上传这个，不用解压
 examples/
   示例-团员年度评议.md   一次完整跑通的输出长什么样（已脱敏）
 ```
 
-**第一次用，先看 [使用说明.md](使用说明.md)。** 那份是写给完全没用过 AI 技能的人的，从“点哪个按钮”开始讲，末尾还附了一段给老师演示的五分钟脚本。
+**第一次用，先看 [使用说明.md](使用说明.md)。** 那份从"要先装 WorkBuddy"讲起，含一段脱敏的实测输出示例和一份按场景的清单。
 
 ## 它能处理什么
 
